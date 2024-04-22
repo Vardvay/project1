@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device‑width, height=device‑height, initial‑scale=1.0, maximum‑scale=1.0, minimum‑scale=1.0, user‑scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href='../../css/main.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >
+
+</head>
+<body>
+<style>
+    body {
+    background: #2c2c2c;
+}
+aside {
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+aside img {
+    width: 80px;
+    float: left;
+}
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+aside ul {list-style: none}
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: all 6s ease;
+}
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+</style>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value={{dat}}><br><br>
+  <input type="submit" value="Submit">
+</form>
+<aside>
+    <h3>Навигация</h3>
+    <ul>
+        <a href="/"><li><i class="fas fa-home"></i> Главная</li></a>
+        <a href="/about"><li><i class="fas fa-address-card"></i> Про нас</li></a>
+        <a href=""><li><i class="fas fa-paper-plane"></i> Контакты</li></a>
+    </ul>
+</aside>
+<main>
+</main>
+
+</body>
+</html>
